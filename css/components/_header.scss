@@ -1,0 +1,170 @@
+.header {
+  position: relative;
+  padding-top: max(1.92%, 20px);
+  padding-bottom: max(1.52%, 15px);
+
+  &__container {
+    padding-left: 91px;
+    padding-right: 106px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 60px;
+
+    @include desktop-1400 {
+      gap: 45px;
+    }
+
+    @include desktop-1250 {
+      gap: 35px;
+    }
+
+    @include desktop-1100 {
+      padding-left: 80px;
+      padding-right: 90px;
+      gap: 25px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 2px;
+    left: 103px;
+    width: 8%;
+
+    @include desktop-1100 {
+      left: 80px;
+      width: 9%;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $firm-orange-color;
+      transition: outline 0.2s ease;
+    }
+  }
+
+  .header-nav {
+    &__list {
+      display: flex;
+      gap: 60px;
+
+      @include desktop-1400 {
+        gap: 45px;
+      }
+
+      @include desktop-1250 {
+        gap: 35px;
+      }
+
+      @include desktop-1100 {
+        gap: 25px;
+      }
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      font-family: "Playfair Display", serif;
+      font-size: 1rem;
+      line-height: 1.34rem;
+      color: #797575;
+
+      svg {
+        fill: #797575;
+        transition: fill 0.3s ease;
+
+        @include desktop-1400 {
+          transform: scale(0.8);
+        }
+
+        @include desktop-1100 {
+          transform: scale(0.6);
+        }
+      }
+
+      &:hover {
+        svg {
+          fill: $firm-orange-color;
+        }
+      }
+
+      &:focus-visible {
+        outline: 2px solid $firm-orange-color;
+        outline-offset: 7px;
+        transition: outline 0.2s ease;
+      }
+
+      &:active {
+        svg {
+          fill: #797575;
+        }
+      }
+    }
+  }
+
+  &__phone-link {
+    padding: 20px 41px 20px 61px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    background-color: $firm-orange-color;
+    background-image: url(../../img/Phone\ Icone.svg);
+    background-repeat: no-repeat;
+    background-size: auto 46.3%;
+    background-position: 20px 50%;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $firm-pale-orange-color;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #ab3b0b;
+      outline-offset: 5px;
+    }
+
+    &:active {
+      background-color: $firm-pale-orange-color;
+    }
+
+    @include desktop-1400 {
+      padding: 15px 35px 15px 55px;
+    }
+  }
+
+  .social-list__link {
+    svg {
+      fill: #a79d9d;
+      transition: fill 0.3s ease;
+
+      @include desktop-1400 {
+        transform: scale(0.8);
+      }
+
+      @include desktop-1100 {
+        transform: scale(0.6);
+      }
+    }
+
+    &:hover svg {
+      fill: #ff6b2c;
+    }
+
+    &:focus-visible {
+      outline: 2px $firm-orange-color solid;
+      outline-offset: 5px;
+      transition: outline 0.2s ease;
+    }
+
+    &:active {
+      svg {
+        fill: #a79d9d;
+      }
+    }
+  }
+}

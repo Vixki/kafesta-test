@@ -1,0 +1,132 @@
+.blog {
+  padding: 1.72% 0 9.6%;
+
+  &__container {
+    @include flex-col-center;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  .swiper {
+    margin-bottom: 6%;
+    @include flex-col-center;
+
+    .pagination {
+      font-size: 0;
+
+      &__elem {
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        background-color: #d9d9d9;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        @include desktop-1400 {
+          transform: scale(0.7);
+        }
+
+        @include desktop-1100 {
+          transform: scale(0.6);
+        }
+
+        &:hover {
+          background-color: $firm-orange-color;
+        }
+
+        &:focus-visible {
+          outline: none;
+          background-color: $firm-orange-color;
+        }
+
+        &:not(:last-child) {
+          margin-right: 15px;
+
+          @include desktop-1400 {
+            margin-right: 8px;
+          }
+        }
+
+        &.active {
+          background-color: $firm-pale-orange-color;
+
+          &:hover {
+            background-color: $firm-orange-color;
+          }
+          &:focus-visible {
+            background-color: $firm-orange-color;
+          }
+        }
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .slide {
+        padding: 3.4% 0 30px 4.1%;
+        flex-basis: 76.2%;
+        display: flex;
+        align-items: center;
+        background: url(../../img/quote.svg) no-repeat,
+          url(../../img/quote-close.svg) 78% 100% no-repeat;
+        background-size: 4.9% auto;
+
+        &__img {
+          width: 18%;
+          margin-right: 20px;
+        }
+
+        &__content {
+          padding-bottom: 20px;
+
+          @include desktop-1400 {
+            padding-bottom: 0;
+          }
+        }
+
+        &__title {
+          font-size: 1.5rem;
+          line-height: 1.95rem;
+          font-weight: 500;
+        }
+
+        &__descr {
+          font-size: 1.1rem;
+          line-height: 1.46rem;
+        }
+      }
+    }
+
+    &__nav-btn {
+      @include desktop-1400 {
+        transform: scale(0.7);
+      }
+      @include desktop-1100 {
+        transform: scale(0.6);
+      }
+
+      svg {
+        width: 100%;
+        fill: #d9d9d9;
+        transition: fill 0.3s ease;
+      }
+
+      &:hover svg {
+        fill: $firm-pale-orange-color;
+      }
+
+      &:focus-visible {
+        outline: none;
+        svg {
+          fill: $firm-pale-orange-color;
+        }
+      }
+    }
+  }
+}

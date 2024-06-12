@@ -1,0 +1,176 @@
+.footer {
+  position: relative;
+  padding: 15.2% 0 7.6%;
+  color: #ffffff;
+  background-color: $firm-orange-color;
+
+  &__container {
+    margin: 0 auto;
+    padding: 0px 7.1% 0px 15.5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    flex-basis: 34.3%;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 21.3%;
+  }
+
+  &__descr {
+    margin-bottom: 10.5%;
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  &__social {
+    span {
+      display: inline-block;
+      margin-bottom: 5.7%;
+      font-size: 1.25rem;
+      line-height: 1.6rem;
+      font-weight: 500;
+    }
+    .social-list {
+      @include desktop-1100 {
+        gap: 15px;
+      }
+    }
+    .social-list__link {
+      @include desktop-1250 {
+        transform: scale(0.8);
+      }
+      @include desktop-1100 {
+        transform: scale(0.7);
+      }
+
+      svg {
+        fill: #ffffff;
+        transition: fill 0.3s ease, transform 0.3s ease;
+      }
+
+      &:hover svg {
+        fill: #f3ebe7;
+        transform: scale(1.1);
+      }
+      &:focus-visible {
+        outline: none;
+
+        svg {
+          fill: #f3ebe7;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  &__center {
+    .nav {
+      &__item {
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.45rem;
+        color: #f3ebe7;
+        transition: color 0.3s ease, font-weight 0.3s ease;
+
+        &:not(:last-child) {
+          margin-bottom: 14px;
+        }
+
+        &:hover {
+          font-weight: 700;
+          color: #ffffff;
+        }
+
+        .nav__link:focus-visible {
+          outline-offset: 7px;
+          font-weight: 700;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &__right {
+    flex-basis: 30%;
+    .form {
+      margin-bottom: 13.1%;
+
+      &__lable {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.6rem;
+      }
+
+      &__inp {
+        margin-bottom: 8.5%;
+        padding: 11px 25px;
+        width: 100%;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1rem;
+        border: 3px solid white;
+        border-radius: 5px;
+        background-color: $firm-orange-color;
+
+        &::placeholder {
+          color: #f3ebe7;
+          font-size: 0.8rem;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &__btn {
+        padding: 6px 25px;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.45rem;
+        color: $firm-orange-color;
+        background-color: #ffffff;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: #f3ebe7;
+        }
+
+        &:focus-visible {
+          background-color: #f3ebe7;
+        }
+      }
+    }
+
+    .footer__icons {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+
+      @include desktop-1250 {
+        width: 100%;
+        justify-content: center;
+      }
+
+      @include desktop-1100 {
+        gap: 0;
+      }
+
+      img {
+        @include desktop-1100 {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+}
